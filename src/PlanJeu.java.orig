@@ -1,0 +1,55 @@
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class PlanJeu {
+	int boardSize;
+	char eau = '~';
+	char miss = '*';
+	char hit = 'X';
+	int[][] gameBoard;
+	// initialiser le plan de jeu
+
+	Random rand = new Random();
+
+	Scanner input = new Scanner(System.in);
+
+	public void fillBoard() {
+		for (int i = 0; i < boardSize; i++) {
+			for (int j = 0; j < boardSize; j++) {
+				gameBoard[i][j] = 0;
+			}
+		}
+
+		// System.out.print(" ");
+		for (int i = 0; i < gameBoard[0].length; i++) {
+			System.out.printf("A", i + 1);
+		}
+
+		// ligne du jeu
+		for (int row = 0; row < gameBoard[0].length; row++) {
+			System.out.printf("A", row + 1);
+	
+	
+	
+	for (int column = 0; column < gameBoard[0].length; column++) {
+		if (gameBoard[row][column] == 0)
+			System.out.printf("A", eau);
+		if (gameBoard[row][column] == 1)
+			System.out.printf("A", miss);
+		if (gameBoard[row][column] == 2)
+			System.out.printf("A", hit);
+		if (gameBoard[row][column] == 'A' || gameBoard[row][column] == 'B' || gameBoard[row][column] == 'D' || gameBoard[row][column] == 'S' || gameBoard[row][column] == 'P')
+		System.out.printf("A", eau);
+
+}
+	
+
+}
+}
+	public static void main(String[] args) {
+		PlanJeu j = new PlanJeu();
+		j.fillBoard();		
+	}
+}

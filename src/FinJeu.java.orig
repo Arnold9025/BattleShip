@@ -1,0 +1,22 @@
+
+public class FinJeu {
+	private int availableMissiles;
+	public void finJeu() {
+		
+		
+		System.out.print(availableMissiles);
+		
+		int hits = 0;
+		int shots = 0;
+		while(availableMissiles !=0 && hits !=10) {
+			
+			shots++;
+		}
+		
+		
+		
+	}
+	
+	
+	
+}
